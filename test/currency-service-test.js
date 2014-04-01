@@ -7,21 +7,21 @@ if(Meteor.isServer){
 	});
 }
 
-Tinytest.add('Meteor.Error is thrown if code param is not string', function (test) {
+Tinytest.add('CurrencyService - Meteor.Error is thrown if code param is not string', function (test) {
 	var currencyService = new CurrencyService();
 	test.throws(function(){
 		currencyService.add();
 	});
 });
 
-Tinytest.add('Meteor.Error is thrown if name param is not string', function (test) {
+Tinytest.add('CurrencyService - Meteor.Error is thrown if name param is not string', function (test) {
 	var currencyService = new CurrencyService();
 	test.throws(function(){
 		currencyService.add("LTU", 1);
 	});
 });
 
-Tinytest.add('Meteor.Error is thrown if isBase param is not boolean', function (test) {
+Tinytest.add('CurrencyService - Meteor.Error is thrown if isBase param is not boolean', function (test) {
 	var currencyService = new CurrencyService();
 	test.throws(function(){
 		currencyService.add("LTU", "", "q");
@@ -30,7 +30,7 @@ Tinytest.add('Meteor.Error is thrown if isBase param is not boolean', function (
 
 if(Meteor.isClient){
 	// Clean up before test in case test fails 
-	testAsyncMulti('Test if on client operations on currency service only allowed for logged in users', [
+	testAsyncMulti('CurrencyService - Test if on client operations on currency service only allowed for logged in users', [
 		function (test, expect) {
 	        Meteor.call('currency-service-test/cleanup');
 	    },
@@ -65,14 +65,14 @@ if(Meteor.isClient){
 }
 
 if(Meteor.isServer){
-	Tinytest.add('On server currency document id is returned on successful insertion', function (test) {
+	Tinytest.add('CurrencyService - On server currency document id is returned on successful insertion', function (test) {
 		var currencyService = new CurrencyService();
 		var id = currencyService.add("LTL", "Litas", true);
 		test.equal("LTL", id);
 		Meteor.call('currency-service-test/cleanup');
 	});
 
-	Tinytest.add('If base currency already exists and new base currency is inserted, old one should be set to false', function (test) {
+	Tinytest.add('CurrencyService - If base currency already exists and new base currency is inserted, old one should be set to false', function (test) {
 		var currencyService = new CurrencyService();
 		currencyService.add("LTL", "Litas", true);
 		currencyService.add("EUR", "Euro", true);

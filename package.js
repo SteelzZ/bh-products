@@ -48,4 +48,5 @@ Package.on_test(function (api) {
 
     api.add_files('test/bh-products-test.js', ['client', 'server']);
     api.add_files('test/currency-service-test.js', ['client', 'server']);
+    api.add_files('test/product-service-test.js', ['client', 'server']);
 });

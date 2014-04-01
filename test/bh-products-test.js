@@ -19,7 +19,7 @@ CustomProductService.prototype.constructor = ProductService;
 /*****************************/
 /*         Facade tests      */
 /*****************************/
-Tinytest.add('Check required API', function (test) {
+Tinytest.add('BhProducts - Check required API', function (test) {
 	// Order maters :) - fix it so it wouldnt
 	test.equal(
 		Object.keys(BhProducts.prototype), 
@@ -36,13 +36,13 @@ Tinytest.add('Check required API', function (test) {
 	);  
 });
 
-Tinytest.add('Throws Meteor.Error exception if passed services does not match required interface', function (test) {
+Tinytest.add('BhProducts - Throws Meteor.Error exception if passed services does not match required interface', function (test) {
 	test.throws(function(){
 		new BhProducts();
 	});
 });
 
-Tinytest.add('Check if passed services are registered', function (test) {
+Tinytest.add('BhProducts - Check if passed services are registered', function (test) {
 	var bhProducts = new BhProducts(new ProductService(), new CurrencyService(), new PricingSchemaService());
 
 	test.instanceOf(bhProducts.productService, ProductService);
