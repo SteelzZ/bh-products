@@ -1,0 +1,15 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "bh-products": {
+        "path": "."
+      }
+    },
+    "packages": {
+      "bh-products": {
+        "path": "."
+      }
+    }
+  }
+}
