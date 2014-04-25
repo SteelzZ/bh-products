@@ -38,7 +38,6 @@ Package.on_use(function (api, where) {
 });
 
 Package.on_test(function (api) {
-    api.use('au-services-container', ['client', 'server']);
     api.use('bh-products', ['client', 'server']);
 
     api.use('tinytest', ['client', 'server']);
