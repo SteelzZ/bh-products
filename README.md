@@ -1,4 +1,4 @@
-# Blackhole - Products
+# Blackhole - Products [![Build Status](https://travis-ci.org/SteelzZ/bh-products.svg?branch=master)](https://travis-ci.org/SteelzZ/bh-products)
 
 Meteor package that adds products management functionality. This one of packages that belongs to [Blackhole](https://github.com/SteelzZ/blackhole) project.
 
