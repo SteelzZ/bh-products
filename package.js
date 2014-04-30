@@ -19,7 +19,7 @@ Package.on_use(function (api, where) {
 
 	// For advanced usage
 	// Exports everything that is needed to extend package
-	// bh-leet-products packe is sample extension of this base package
+	// bh-leet-products package is sample extension of this base package
 	api.export('BhProducts', ['client', 'server']);
 
 	api.export('ProductService', ['client', 'server']);

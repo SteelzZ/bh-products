@@ -25,13 +25,7 @@ Tinytest.add('BhProducts - Check required API', function (test) {
 		Object.keys(BhProducts.prototype), 
 		[
 			// BhProducts
-			"subscribe", "publish",
-
-			// Product service
-			"addProduct", "editProduct", "removeProduct", 
-
-			// Currency service
-			"addPricingSchema", "getCurrencies"
+			"subscribe", "publish"
 		]
 	);  
 });
